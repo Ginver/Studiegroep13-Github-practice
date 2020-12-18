@@ -32,7 +32,7 @@ body{
 #talkbubble {
     width: 120px;
     height: 80px;
-    background-color: #D84282;
+    background-color: blue;
     border-radius: 10px;
     position: relative;
     margin: 30px;
