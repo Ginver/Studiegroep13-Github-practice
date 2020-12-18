@@ -1,0 +1,72 @@
+
+:root {
+    --main-bg-color: #D84282;
+    --default-margin: 16px;
+}
+div {
+     border-color: var(--main-bg-color);
+}
+
+body{
+    margin: 70px;
+}
+
+.driehoek {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid black;
+    margin: 30px;
+}
+
+.haromszog {
+    width: 0;
+    height: 0;
+    border-left: 50px solid black;
+    border-bottom: 50px solid transparent;
+    border-top: 50px solid transparent;
+    margin: 30px;
+}
+
+#talkbubble {
+    width: 120px;
+    height: 80px;
+    background-color: #D84282;
+    border-radius: 10px;
+    position: relative;
+    margin: 30px;
+}
+
+#talkbubble::before {
+    content: ""; /*content-property een lege waarde toegewezen. Er hoeft immers geen content in onze driehoek komen te staan, maar we moeten hem wel declareren*/
+    display: block;
+    width: 0;
+    height: 0;
+    left: -20px;
+    top: 26px;
+    border-top: 13px solid transparent;
+    border-right: 20px solid #D84282;
+    border-bottom: 13px solid transparent;
+    position: absolute;
+}
+
+
+p {
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    #introduction {
+        display: none;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 576px) {
+    p {
+        font-size: 16px;
+    }
+}
